@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Signup</title>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script type="text/javascript">
+		var request;
+		function login(){
+			var name=document.logform.uname.value;
+			var mail=document.logform.mail.value;
+			var pwd=document.logform.pwd.value;
+			var conf=document.logform.conf.value;
+			var url="signin.jsp?name="+name+"&mail="+mail"&pwd="+pwd"&conf="+conf;
+			if(window.XMLHttpRequest){ request=new XMLHttpRequest(); }
+			else if(window.ActiveXObject) { request=new ActiveXObject("Microsoft.XMLHTTP");  }
+			try{
+				request.onreadystatechange=getInfo;
+				request.open("POST",url,true);
+				request.send();
+			}catch(e){alert("Unable to connect");}
+		}
+		function getInfo()	
+			{
+			if(request.readyState==4){ var val=request.responseText;
+			document.getElementById("demo").innerHTML=val;
+			}
+			
+		</script>
+<style>
+body{
+	background-attachment:fixed;
+    margin: 0;
+    padding: 0;
+    background: url(damm.jpg);
+    background-size: cover;
+    background-position: top;
+    font-family: sans-serif;
+    color:white;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align:center">CREATE NEW ACCOUNT</h1>
+<div class="col-lg-5 m-auto">
+<div class="card-mt-5 bg-dark">
+<div class="card-body">
+<form method="post" name="logform" action="signin.jsp" class="form-container">
+<div class="form-group">
+USER NAME* : <input type="text" name="uname" class="form-control" placeholder="Enter your username here" required/><br/>
+</div>
+<div class="form-group">
+MAIL ID* : <input type="email" name="mail" class="form-control" placeholder="Enter a valid mail address" required/><br/>
+</div>
+<div class="form-group">
+PASSWORD : <input type="password" name="pwd"  class="form-control" placeholder="Enter your password here" required/>
+</div>
+<div class="form-group">
+CONFIRM PASSWORD : <input type="password" name="conf" class="form-control" placeholder="ReEnter your password here" /><br/>
+</div>
+<input type="submit" class="btn btn-lg btn-primary text-center" style="margin-left:40%" value="SIGN UP"/>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>

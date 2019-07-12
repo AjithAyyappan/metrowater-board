@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+body{
+	background-attachment:fixed;
+    margin: 0;
+    padding: 0;
+    background: url(damm.jpg);
+    background-size: cover;
+    background-position: top;
+    font-family: sans-serif;
+    color:white;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" style="position:fixed; z-index:3; width:100%;">
+  <a class="navbar-brand text-primary" href="#">METRO WATER BOARD</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-info" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      </ul>
+  </div>
+</nav>
+<br><br><br>
+<h1 style="text-align:center">LOGIN HERE</h1>
+
+<div class="col-lg-5 m-auto">
+<div class="card-mt-5 bg-primary">
+<div class="card-body">
+<form method="post" action="login.jsp">
+<div class="form-group">
+USER NAME : <input type="text" name="uname" class="form-control" placeholder="Enter your username here" /><br/>
+</div>
+<div class="form-group">
+PASSWORD : <input type="password" name="pwd"  class="form-control" placeholder="Enter your password here" />
+</div>
+<button class="btn btn-lg btn-success text-center" style="margin-left:40%" type="submit">LOGIN</button>
+</form>
+<form method="post" action="signup.html">
+<p>Don't have an account?</p>
+<button class="btn btn-lg btn-success text-center" style="margin-left:10%" type="submit">SIGN UP </button>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
